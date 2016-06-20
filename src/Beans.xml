@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    
+    <bean id = "sampleBean" class = "com.collection.SampleBean"></bean>
+    
+    <bean id = "javaCollection" class = "com.collection.JavaCollection">
+   		<property name = "addressList">
+   			<list>
+   				<ref bean = "sampleBean"/>
+   				<value>Mamatha</value>
+   				<value>Ragini</value>
+   				<value>Divya</value>
+   			</list>
+   		</property>
+   		<property name = "addressSet">
+   			<set>
+   				<value>Gayathri</value>
+   				<value>Mamatha</value>
+   				<value>Ragini</value>
+   				<value>Divya</value>
+   			</set>
+   		</property>
+   		<property name = "addressMap">
+   			<map>
+   				<entry key = "one" value = "Gayathri"/>
+   				<entry key = "2" value = "Mamatha"/>
+   				<entry key = "three" value = "Ragini"/>
+   				<entry key = "4" value = "Divya"/> 
+   			</map>
+   		</property>
+   		<property name = "addressProp">
+   			<props>
+   				<prop key = "one">Gayathri</prop>
+   				<prop key = "two">Mamatha</prop>
+   				<prop key = "three">Ragini</prop>
+   				<prop key = "four">Divya</prop>
+   			</props>
+   		</property>
+    </bean>
+</beans>
